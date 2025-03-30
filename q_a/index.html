@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>口座におけるQ＆A一覧</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #searchInput {
+      padding: 5px;
+      font-size: 14px;
+    }
+    .qa-section {
+      margin-bottom: 40px;
+    }
+    .qa-item {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    .question {
+      font-weight: bold;
+    }
+    .answer {
+      margin-left: 20px;
+    }
+    a {
+      color: blue;
+      text-decoration: underline;
+    }
+    .embedded-media {
+      margin-top: 10px;
+      max-width: 100%;
+    }
+    .spacer {
+      /* 5行分のスペースを確保（およそ5行分の改行） */
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>口座におけるQ＆A一覧</h1>
+    <input type="text" id="searchInput" placeholder="ページ内検索..." onkeyup="searchFunction()">
+  </div>
 
+  <!-- １：口座開設時のQ＆A -->
+  <section class="qa-section" id="qanda-open-account">
+    <h2>１：口座開設時のQ＆A</h2>
+    <div class="qa-item" id="q1">
+      <p class="question">Q1：開設可能な通貨の種類は何ですか？</p>
+      <p class="answer">A1：ドルが基準となっております。その他には、現地通貨のクメールリエルや隣国タイのバーツも追加選択していただけます。</p>
+    </div>
+    <div class="qa-item" id="q2">
+      <p class="question">Q2：口座開設の手続き完了には何日かかりますか？</p>
+      <p class="answer">A2：約１０営業日です。必要書類を受け取り次第、カンボジア側での手続きに入ります。口座番号（約５営業日）＋ デビットカード発行（約５営業日）の合計で約１０営業日となります。</p>
+    </div>
+    <div class="qa-item" id="q3">
+      <p class="question">Q3：口座開設のために必要な手続きは何ですか？</p>
+      <p class="answer">
+        A3：<a href="https://sasuraimitsu.github.io/pdf-flow-viewer/" target="_blank">四ステップ</a>で口座開設手続きを行えます。<br>
+        一　お客様情報を<a href="https://forms.gle/uyNiGKy5yULhSSuz8" target="_blank">Google Form</a>に入力<br>
+        二　口座開設申込書類への記入<br>
+        三　公証役場での認証手続き<br>
+        四　申込書類一式の郵送
+      </p>
+    </div>
+    <div class="qa-item" id="q4">
+      <p class="question">Q4：書類郵送先の株式会社ＭＥＴＩＳはどのような会社ですか？</p>
+      <p class="answer">
+        A4：日本とカンボジアでの輸送サービスを行っている会社です。<br>
+        <a href="https://www.metis-inc.co.jp/service/export-import-support/" target="_blank">詳細はこちら</a>
+      </p>
+    </div>
+    <div class="qa-item" id="q5">
+      <p class="question">Q5：Internet Banking のログインIDに利用する文字の縛りはありますか？</p>
+      <p class="answer">A5：８文字以上・大文字小文字記号数字の組み合わせ</p>
+    </div>
+    <div class="qa-item" id="q6">
+      <p class="question">Q6：モバイルアプリは利用した方がいいですか？</p>
+      <p class="answer">
+        A6：携帯で簡単に操作ができるため、お勧めしております。<br>
+        ダウンロードについてのサポートは、口座開設書類一式がお手元に到着した際にご案内いたします。<br>
+        参考URL：<a href="https://play.google.com/store/apps/details?id=com.domain.acledabankqr" target="_blank">アプリのダウンロード</a>
+      </p>
+    </div>
+    <div class="qa-item" id="q7">
+      <p class="question">Q7：公証役場での手続きは何をすればよろしいでしょうか？</p>
+      <p class="answer">
+        A7："私署証書の認証" と "アポスティーユ認証" という２つの手続きです。<br>
+        - 私署証書の認証：口座申込書類のサインが自分のものであることを証明<br>
+        - アポスティーユ認証：上記認証済み書類が国外でも有効となる証明
+      </p>
+    </div>
+    <div class="qa-item" id="q8">
+      <p class="question">Q8：上記の認証手続きを公証役場で対応ができませんでした。どうすればいいですか？</p>
+      <p class="answer">
+        A8：下記の都道府県以外の公証役場でのお手続きは、私署証書の認証のみとなります。<br>
+        お申込み時にご連絡いただいた公証役場が下記以外に変更になった場合には、手続きが異なりますので <a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャル</a> にご連絡ください。<br>
+        ※対象：東京都、神奈川県、静岡県、愛知県、大阪府、宮城県、福岡県、北海道（札幌市）
+      </p>
+    </div>
+    <div class="qa-item" id="q9">
+      <p class="question">Q9：パスポートはどのページを印刷すればいいですか？</p>
+      <p class="answer">
+        A9：新旧どちらのパスポートも、顔写真が載っている見開き部分２ページ分の印刷をお願いします。<br>
+        <!-- 画像差し込み例：jpgファイルの場合 -->
+        <img src="passport_example.jpg" alt="パスポート印刷例" class="embedded-media">
+        <!-- PDF を表示する場合は以下のように <embed> タグを利用 -->
+        <!-- <embed src="passport_example.pdf" type="application/pdf" class="embedded-media" width="100%" height="600px" /> -->
+      </p>
+    </div>
+
+    <!-- Q9とQ10の間に5行分のスペースを確保 -->
+    <div class="spacer">
+      <br><br><br><br><br>
+    </div>
+
+    <div class="qa-item" id="q10">
+      <p class="question">Q10：カードの年会費がわかりにくいので、一覧で教えてください。</p>
+      <p class="answer">
+        A10：下記の表をご覧ください。<br>
+        ※アクレダ銀行が発行するゴールドカードの年会費がお得です。<br>
+        <img src="assets/card_fee_table.jpg" alt="カード年会費一覧" class="embedded-media">
+        <!-- <embed src="assets/card_fee_table.pdf" type="application/pdf" class="embedded-media" width="100%" height="600px" /> -->
+      </p>
+    </div>
+  </section>
+
+  <!-- ２：口座利用時のQ＆A -->
+  <section class="qa-section" id="qanda-usage">
+    <h2>２：口座利用時のQ＆A</h2>
+    <div class="qa-item" id="q11">
+      <p class="question">Q11：お金の預入はどこで行えばいいですか？</p>
+      <p class="answer">A11：日本を含め、どの国のATMからでも預け入れは可能です。</p>
+    </div>
+    <div class="qa-item" id="q12">
+      <p class="question">Q12：アクレダ銀行からの海外送金の上限額を知りたいです。</p>
+      <p class="answer">
+        A12：上限金額無しで送金いただけます。<br>
+        ただし、送金金額が大きい場合は、送金目的が明確な書類（例：インボイスや契約書等）の提出が必要です。
+      </p>
+    </div>
+    <div class="qa-item" id="q13">
+      <p class="question">Q13：質問があった場合はどうすればいいですか？</p>
+      <p class="answer">
+        A13：<a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャル</a> にてお気軽にお問い合わせください。営業時間内にご返信いたします。
+      </p>
+    </div>
+    <div class="qa-item" id="q14">
+      <p class="question">Q14：よくわからないメールが銀行から来ました、どうすればいいでしょうか？</p>
+      <p class="answer">
+        A14：<a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャル</a>をご利用ください。いつでもご連絡お待ちしております。
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>
+      こちらのQ＆Aコーナーは順次内容を更新させていただいております。<br>
+      記載のない質問等ございましたら、<br>
+      ご連絡先は <a href="https://lin.ee/0MMLkok" target="_blank">LINE オフィシャル</a> までご連絡いただけると幸いです.
+    </p>
+  </footer>
+
+  <script>
+    // シンプルなページ内検索機能
+    function searchFunction() {
+      var input = document.getElementById('searchInput');
+      var filter = input.value.toLowerCase();
+      var qaItems = document.getElementsByClassName('qa-item');
+      for (var i = 0; i < qaItems.length; i++) {
+        var text = qaItems[i].textContent || qaItems[i].innerText;
+        qaItems[i].style.display = text.toLowerCase().indexOf(filter) > -1 ? "" : "none";
+      }
+    }
+  </script>
+</body>
+</html>
